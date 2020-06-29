@@ -2,7 +2,6 @@ package com.dz.bookassignservice.controller;
 
 import com.dz.bookassignservice.model.BookIssue;
 import com.dz.bookassignservice.service.BookIssueService;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +14,6 @@ import java.util.Optional;
  *
  * Software Developer
  */
-@Api(tags = "bookassign")
 @RestController
 @RequestMapping(value = "/bookIssue")
 public class BookIssueController {

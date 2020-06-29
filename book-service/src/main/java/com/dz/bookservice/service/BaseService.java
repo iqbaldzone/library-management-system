@@ -4,6 +4,11 @@ import com.dz.bookservice.model.IndentityModel;
 
 import java.util.Optional;
 
+/**
+ * Created by : Iqbal Mohmmed </br>
+ *
+ * Software Developer
+ */
 public interface BaseService<T extends IndentityModel> {
 
     T save(T user);

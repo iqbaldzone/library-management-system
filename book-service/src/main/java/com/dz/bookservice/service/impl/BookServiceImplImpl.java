@@ -6,6 +6,11 @@ import com.dz.bookservice.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Created by : Iqbal Mohmmed </br>
+ *
+ * Software Developer
+ */
 @Service
 public class BookServiceImplImpl extends BaseServiceImpl<Book> implements BookService {
 

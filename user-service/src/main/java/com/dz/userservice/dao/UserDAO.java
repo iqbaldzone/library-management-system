@@ -6,6 +6,13 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * This class is use for DB communication and transaction </br></br>
+ *
+ * Created by : Iqbal Mohmmed </br>
+ *
+ * Software Developer
+ */
 @Repository
 @Transactional
 public interface UserDAO extends CrudRepository<User, Long> {

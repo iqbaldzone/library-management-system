@@ -3,8 +3,14 @@ package com.dz.bookservice.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+/**
+ * Created by : Iqbal Mohmmed </br>
+ *
+ * Software Developer
+ */
 @Entity
 @Table(name = "departments")
 @Data
@@ -15,19 +21,4 @@ public class Department extends IndentityModel {
 
     private String admin;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(String admin) {
-        this.admin = admin;
-    }
 }

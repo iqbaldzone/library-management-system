@@ -15,6 +15,13 @@ import java.sql.Timestamp;
 import java.util.Objects;
 import java.util.Optional;
 
+/**
+ * This is service that is responsible for operation related to book assignment </br></br>
+ *
+ * Created by : Iqbal Mohmmed </br>
+ *
+ * Software Developer
+ */
 @Service
 public class BookIssueServiceImplImpl implements BookIssueService {
 
@@ -27,6 +34,11 @@ public class BookIssueServiceImplImpl implements BookIssueService {
     @Autowired
     private UserRestClient userRestClient;
 
+    /**
+     * This method is use to save details of book issue
+     * @param bookIssue : {@link BookIssue}
+     * @return @{@link BookIssue}
+     */
     @Override
     public BookIssue save(BookIssue bookIssue) {
         Book book = bookRestClient.get(bookIssue.getBookId().toString()).getBody();
@@ -52,11 +64,21 @@ public class BookIssueServiceImplImpl implements BookIssueService {
         return bookIssueDAO.save(bookIssue);
     }
 
+    /**
+     * this method is use to save list of Book issue details
+     * @param bookIssues : List of @{@link BookIssue}
+     * @return List of @{@link BookIssue}
+     */
     @Override
     public Iterable<BookIssue> saveAll(Iterable<BookIssue> bookIssues) {
         return this.bookIssueDAO.saveAll(bookIssues);
     }
 
+    /**
+     * this is use to update Book issue details
+     * @param bookIssue : @{@link BookIssue}
+     * @return @{@link BookIssue}
+     */
     @Override
     public BookIssue update(BookIssue bookIssue) {
         if (bookIssue.isReturned()) {
@@ -71,16 +93,30 @@ public class BookIssueServiceImplImpl implements BookIssueService {
         return bookIssueDAO.save(bookIssue);
     }
 
+    /**
+     * This is use get Book issue details by issue id
+     * @param id : long
+     * @return @{@link BookIssue}
+     */
     @Override
     public Optional<BookIssue> findById(long id) {
         return bookIssueDAO.findById(id);
     }
 
+    /**
+     * Get All details of Book issued
+     * @return List of @{@link BookIssue}
+     */
     @Override
     public Iterable<BookIssue> findAll() {
         return bookIssueDAO.findAll();
     }
 
+    /**
+     * Delete Book issue details by id
+     * @param id : long
+     * @return @{@link String}
+     */
     @Override
     public String delete(long id) {
         BookIssue bookIssue = this.findById(id).get();
@@ -90,6 +126,11 @@ public class BookIssueServiceImplImpl implements BookIssueService {
         return "deleted";
     }
 
+    /**
+     * Permanently Delete Book issue details by id
+     * @param id : long
+     * @return @{@link String}
+     */
     @Override
     public String permanentDelete(long id) {
         bookIssueDAO.deleteById(id);

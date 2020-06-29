@@ -5,6 +5,11 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
+/**
+ * Created by : Iqbal Mohmmed </br>
+ *
+ * Software Developer
+ */
 @Entity
 @Table(name = "authors")
 @Data

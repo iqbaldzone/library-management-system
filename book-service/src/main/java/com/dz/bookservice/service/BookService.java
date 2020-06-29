@@ -2,6 +2,11 @@ package com.dz.bookservice.service;
 
 import com.dz.bookservice.model.Book;
 
+/**
+ * Created by : Iqbal Mohmmed </br>
+ *
+ * Software Developer
+ */
 public interface BookService extends BaseService<Book> {
 
     Iterable<Book> findAllByTitle(String title);
